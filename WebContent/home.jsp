@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
 <meta http-equiv="Content-Style-Type" content="text/css"/>
 <meta http-equiv="Content-Script-Type" content="text/javascript"/>
 <meta http-equiv="imagetoolbar" content="no"/>
@@ -14,6 +14,7 @@
 <title>Home画面</title>
 
 <style type="text/css">
+
 /* ======== TAG LAYOUT ========*/
 body{
 margin : 0;
@@ -21,7 +22,7 @@ padding : 0;
 line-height:1.6;
 letter-spaching: 1px;
 font-family: Verdana,Helvetica,sans-serif;
-fout-size: 12px;
+font-size: 12px;
 color: #333;
 background: #fff;
 }
