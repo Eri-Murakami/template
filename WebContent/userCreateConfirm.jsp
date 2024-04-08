@@ -11,52 +11,54 @@
 <meta name="description" content=""/>
 <mate name="keywords" content=""/>
 
-<title>Login画面</title>
+<title>UserCreateConfirm画面</title>
 <style type="text/css">
 
 /* ======== TAG LAYOUT  ======== */
-body{
-margin: 0;
+body {
+magin: 0;
 padding: 0;
 line-height: 1.6;
 letter-spacing: 1px;
-font-family:Verdana, Helvetica, sans-serif;
-font-size: #333;
+font-family: Verdana, Helvetica, sans-serif;
+font-size: 12px;
+color: #333;
 background: #fff;
 }
 
-table{
-text-align:center;
+table {
+text-align: center;
 margin: 0 auto;
 }
 
 /* ======== ID LAYOUT  ======== */
-#top{
+#top {
 width: 780px;
 margin: 30px auto;
 border: 1px solid #333;
 }
 
-#header{
+#header {
 width: 100%;
 height: 80px;
 background-color: black;
 }
 
-#main{
+#main {
 width: 100%;
 height: 500px;
 text-align: center;
 }
 
-#footer{
+#footer {
 width: 100%;
 height: 80px;
 background-color: black;
+clear: both;
 }
 
 </style>
->
+
 </head>
 <body>
 
@@ -67,27 +69,46 @@ background-color: black;
 
 <div id="main">
 <div id="top">
-<p>Login</p>
+<p>UserCreateConfirm</p>
 </div>
-
-
-<h3>商品を購入する際にはログインをお願いします。</h3>
-<s:form action="LoginAction">
-<s:textfield name="loginUserId"/>
-<s:password name="loginPassword"/>
-<s:submit value="ログイン"/>
-</s:form>
-<br/>
-
 <div>
-<span>新規ユーザー登録は
-<a href='<s:url action="UserCreateAction"/>'>こちら</a>
-</span>
-</div>
-</div>
+<h3>登録する内容は以下でよろしいですか。</h3>
+<table>
+<s:form action="UserCreateCompleteAction">
+<tr id="box">
+<td>
+<label>ログインID：</label>
+</td>
+<td>
+<s:property value="loginUserId" escape="false" />
+</td>
+</tr>
 
-<div id="footer">
-<div id="pr">
+<tr id="box">
+<td>
+<label>ログインPASS:</label>
+</td>
+<td>
+<s:property value="loginPAssword" escape="false"/>
+</td>
+</tr>
+
+<tr id="box">
+<td>
+<label>ユーザー名：</label>
+</td>
+<td>
+<s:property value="userName" escape="false"/>
+</td>
+</tr>
+
+<tr>
+<td>
+<s:submit value="完了"/>
+</td>
+</tr>
+</s:form>
+</table>
 </div>
 </div>
 </body>
