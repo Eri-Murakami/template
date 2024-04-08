@@ -16,7 +16,7 @@
 
 /* ======== TAG LAYOUT  ======== */
 body {
-magin: 0;
+margin: 0;
 padding: 0;
 line-height: 1.6;
 letter-spacing: 1px;
@@ -109,6 +109,11 @@ clear: both;
 </tr>
 </s:form>
 </table>
+</div>
+</div>
+
+<div id="footer">
+<div id="pr">
 </div>
 </div>
 </body>
