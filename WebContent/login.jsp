@@ -33,7 +33,7 @@ margin: 0 auto;
 /* ======== ID LAYOUT  ======== */
 #top{
 width: 780px;
-margin: 30 auto;
+margin: 30px auto;
 border: 1px solid #333;
 }
 
@@ -45,16 +45,14 @@ background-color: black;
 
 #main{
 width: 100%;
-height: 80px;
-background-color: black;
-clear: both;
+height: 500px;
+text-align: center;
 }
 
 #footer{
 width: 100%;
 height: 80px;
 background-color: black;
-clear:both;
 }
 
 </style>
@@ -71,7 +69,7 @@ clear:both;
 <div id="top">
 <p>Login</p>
 </div>
-</div>
+
 
 <h3>商品を購入する際にはログインをお願いします。</h3>
 <s:form action="LoginAction">
@@ -83,6 +81,7 @@ clear:both;
 
 <div>
 <span>新規ユーザー登録は<a href='<s:url action="UserCreateAction"/>'>こちら</a></span>
+</div>
 </div>
 <div id="footer">
 <div id="pr">
