@@ -11,40 +11,41 @@
 <meta name="description" content=""/>
 <mate name="keywords" content=""/>
 
-<title>buyItemComplete画面</title>
+<title>MyPage画面</title>
 <style type="text/css">
 
 /* ======== TAG LAYOUT  ======== */
-body {
-magin: 0;
+body{
+margin: 0;
 padding: 0;
 line-height: 1.6;
-letter-spacing: Verdana, Helvetia, sans-serif;
+letter-spacing: 1px;
+font-family: Verdana, Helvetica, sans-serif;
 font-size: 12px;
 color: #333;
 background: #fff;
 }
 
 table {
-text-align:center;
+text-align: center;
 margin: 0 auto;
 }
 
 /* ======== ID LAYOUT  ======== */
 #top {
 width: 780px;
-margin:30px auto;
-border: 1px solid #333;
+margin: 30px auto;
+border:1px solid #333;
 }
 
-#header {
+#header{
 width: 100%;
 height: 80px;
 background-color: black;
 }
 
 #main {
-width : 100%;
+width: 100%;
 height: 500px;
 text-align: center;
 }
@@ -55,7 +56,6 @@ height: 80px;
 background-color: black;
 clear: both;
 }
-
 </style>
 </head>
 <body>
@@ -65,13 +65,42 @@ clear: both;
 </div>
 <div id="main">
 <div id="top">
-<p>BuyItemComplete</p>
+<p>MyPage</p>
 </div>
 <div>
-<p>購入手続きが完了致しました。</p>
+<s:if test="session.message == ''">
+<h3>ご購入情報は以下になります。</h3>
+<table>
+<tr>
+<td>商品名</td>
+<td><s:property value="session.buyItem_name"/></td>
+</tr>
+<tr>
+<td>値段</td>
+<td><s:property value="session.total_price"/><span>円</span></td>
+</tr>
+<tr>
+<td>購入個数</td>
+<td><s:property value="session.total_count"/><span>個</span></td>
+</tr>
+<tr>
+<td>支払方法</td>
+<td><s:property value="session.total_payment"/></td>
+</tr>
+</table>
+<s:form action="MyPageAction">
+<input type="hidden" name="deleteFlg" value="1">
+<s:submit value="削除" method="delete"/>
+</s:form>
+</s:if>
+<s:if test="session.message != null">
+<h3><s:property value="session.message"/></h3>
+</s:if>
 <div>
-<a href='<s:url action="MyPageAction"/>'>マイページ</a>
-<span>から購入履歴の確認が可能です。</span>
+<br>
+<span>前面に戻る場合は</span>
+<a href='<s:url action="HomeAction"/>'>ログアウト</a>
+<span>をお願いします</span>
 </div>
 </div>
 </div>
