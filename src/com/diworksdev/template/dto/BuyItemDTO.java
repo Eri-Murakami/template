@@ -2,7 +2,7 @@ package com.diworksdev.template.dto;
 
 public class BuyItemDTO {
 	
-	public int id;
+	private int id;
 	private String itemName;
 	private String itemPrice;
 	

@@ -59,7 +59,7 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 	}
 	
 	@Override
-	public void setSession(Map<String, Object> ssession) {
+	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
 	

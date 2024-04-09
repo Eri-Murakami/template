@@ -73,6 +73,7 @@ clear:both;
 <p>BuyItem</p>
 </div>
 
+<div>
 <s:form action="BuyItemAction">
 <table>
 
@@ -134,7 +135,7 @@ clear:both;
 <a href='<s:url action="HomeAction"/>'>こちら</a>
 </div>
 </div>
-
+</div>
 <div id="footer">
 <div id="pr">
 </div>
