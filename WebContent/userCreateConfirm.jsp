@@ -89,7 +89,7 @@ clear: both;
 <label>ログインPASS:</label>
 </td>
 <td>
-<s:property value="loginPAssword" escape="false"/>
+<s:property value="loginPassword" escape="false"/>
 </td>
 </tr>
 
